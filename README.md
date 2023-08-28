@@ -24,9 +24,9 @@
 
 ## 設計書
 テーブル定義書
-- https://docs.google.com/spreadsheets/d/1y6u_wMdsCuFRlGaLwKubMsehFLnFlcEWuE8779C_uSc/edit?usp=sharing
+ https://docs.google.com/spreadsheets/d/1y6u_wMdsCuFRlGaLwKubMsehFLnFlcEWuE8779C_uSc/edit?usp=sharing
 ER図
-- https://drive.google.com/file/d/1w1GkjYeLMSTRSbfLev3NliTro8cO8Ro2/view?usp=sharing
+ https://drive.google.com/file/d/1w1GkjYeLMSTRSbfLev3NliTro8cO8Ro2/view?usp=sharing
 <!--テーマを設定・提出する時点では不要です-->
 ​
 ## 開発環境
