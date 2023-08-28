@@ -22,7 +22,7 @@
 ### 実装機能リスト
 - ​https://docs.google.com/spreadsheets/d/1MA6g3OF14I7Ix6Vv8_Qr-eBaCPLx_PuvT_-GfjFRBO8/edit?usp=sharing
 
-## 設計書
+### 設計書
 - テーブル定義書
 　　 https://docs.google.com/spreadsheets/d/1y6u_wMdsCuFRlGaLwKubMsehFLnFlcEWuE8779C_uSc/edit?usp=sharing
 - ER図
