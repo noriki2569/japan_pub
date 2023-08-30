@@ -2,27 +2,28 @@
 ​
 ## サイト概要
 ### サイトテーマ
-- 居酒屋サーチサイト
 - おすすめ居酒屋を紹介し合うコミュニティーサイト
 
 ​
 ### テーマを選んだ理由
-自分自身がお店を探すのが得意ではないのでこの様なサイトがあると
-便利だと思ったからです。
+大阪にある居酒屋の中でローカルなお店やをたくさんの人に知ってもらいたい
 ​
 ### ターゲットユーザ
-- 20歳以上の男性・女性
-​
-### 主な利用シーン
 - いつもと違った場所で呑みに行こうとしている人
-- 女の子と行きやすい店を探している人
+- 気になってはいたがどのような店か分からないので入るのを躊躇っていた人
 - 宴会の幹事を任された人
+### 主な利用シーン
+- 宴会の幹事を任され、お店を決めようとしている時
+- 新しい居酒屋の探索をしている時
+- 地元のおすすめ居酒屋の情報共有
 <!--どのような時に使うのかの状況を記載すること-->
 
 ### 実装機能リスト
 - ​https://docs.google.com/spreadsheets/d/1MA6g3OF14I7Ix6Vv8_Qr-eBaCPLx_PuvT_-GfjFRBO8/edit?usp=sharing
 
 ## 設計書
+- 実装機能リスト
+ ​https://docs.google.com/spreadsheets/d/1MA6g3OF14I7Ix6Vv8_Qr-eBaCPLx_PuvT_-GfjFRBO8/edit?usp=sharing
 - テーブル定義書
  https://docs.google.com/spreadsheets/d/1y6u_wMdsCuFRlGaLwKubMsehFLnFlcEWuE8779C_uSc/edit?usp=sharing
 - ER図
@@ -35,8 +36,3 @@
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery
 - IDE：Cloud9
-​
-## 使用素材
-- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
-- アプリケーションの実装に使用したgem/bootstrapのリファレンスなどの記載は不要です。
-- 使用しない場合は、使用素材の項目をREADMEから削除してください。
