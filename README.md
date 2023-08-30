@@ -16,10 +16,6 @@
 - 宴会の幹事を任され、お店を決めようとしている時
 - 新しい居酒屋の探索をしている時
 - 地元のおすすめ居酒屋の情報共有
-<!--どのような時に使うのかの状況を記載すること-->
-
-### 実装機能リスト
-- ​https://docs.google.com/spreadsheets/d/1MA6g3OF14I7Ix6Vv8_Qr-eBaCPLx_PuvT_-GfjFRBO8/edit?usp=sharing
 
 ## 設計書
 - 実装機能リスト
