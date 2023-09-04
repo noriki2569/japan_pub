@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
 scope module: :public do
     root to: 'homes#top'
     resources :pub, only: [:new, :index, :update, :create, :edit, :destroy]
@@ -12,7 +13,7 @@ namespace :admin do
    resources :users, only: [:index, :show, :edit, :update]
 end
 
-devise_for :customers,skip: [:passwords], controllers: {
+devise_for :users, skip: [:passwords], controllers: {
   registrations: "public/registrations",
   sessions: 'public/sessions'
 }
