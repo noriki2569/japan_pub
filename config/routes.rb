@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  
+
 scope module: :public do
     root to: 'homes#top'
-    resources :pub, only: [:new, :index, :update, :create, :edit, :destroy]
+    resources :pubs, only: [:new, :index, :update, :create, :edit, :destroy]
     get "users/confirmation" => 'users#confirmation'
     patch "users/withdrawal" => 'userrs#withdrawal'
     resources :users, only: [:index, :show, :edit, :update]
