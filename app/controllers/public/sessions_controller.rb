@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 class Public::SessionsController < Devise::SessionsController
-   before_action :user_state, only: [:create]
+   #before_action :user_state, only: [:create]
 
   def after_sign_in_path_for(resource)
-    pub_index_path
+    pub_path
   end
 
   def after_sign_out_path_for(resource)

@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row justify-content-left">
+    <h1>新規投稿</h1>
+  </div>
+
+  <div class="row">
+    <%= form_with model: @pub, url: pubs_path do |f| %>
+    <div class="col-7">
+      <table>
+        <tr>
+          <th>
+            <font size="5">居酒屋名</font>
+          </th>
+          <td>
+            <%= f.text_field :name %>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <font size="5">目安予算</font>
+          </th>
+          <td>
+            <%= f.text_field :average_budget %>円
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <font size="5">居酒屋紹介文</font>
+          </th>
+          <td>
+            <%= f.text_area :introduction %>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <%= f.submit "投稿" %>
+          </th>
+        </tr>
+      </table>
+    </div>
+
+    <div class="col-5">
+      <div class="field">
+        <font size="5">投稿写真</font>
+      </div>
+      <div class="field">
+        <%= f.file_field :image, accept: "image/*" %></br>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

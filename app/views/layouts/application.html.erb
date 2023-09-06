@@ -15,46 +15,46 @@
     <header>
      <nav class="navbar navbar-expand-lg navbar-light">
       <div class ="container">
-        <h1><%= link_to "Territory", root_path, :class => "btn btn-outline-dark btn-lg" %></h1>
+        <h1><%= link_to "Territory", root_path, class:"btn btn-outline-dark btn-lg" %></h1>
         <ul class="navbar-nav bd-navbar-nav flex-row-left">
            <% if admin_signed_in? %>
            <li>
-               <%= link_to "ホーム", admin_root_path, :class => "btn btn-outline-dark btn-xs" %>
+               <%= link_to "ホーム", admin_root_path, class:"btn btn-outline-dark btn-xs" %>
            </li>
            <li>
-               <%= link_to "会員一覧", admin_users_path, :class => "btn btn-outline-dark btn-xs" %>
+               <%= link_to "会員一覧", admin_users_path, class:"btn btn-outline-dark btn-xs" %>
            </li>
            <li>
-               <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, :class => "btn btn-outline-dark btn-xs" %>
+               <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class:"btn btn-outline-dark btn-xs" %>
            </li>
            <% elsif user_signed_in? %>
            <li>
-               <%= link_to "ホーム", root_path, :class => "btn btn-outline-dark btn-xs" %>
+               <%= link_to "ホーム", root_path, class:"btn btn-outline-dark btn-xs" %>
            </li>
            <li>
-               <%= link_to "ユーザー", users_path, :class => "btn btn-outline-dark btn-xs" %>
+               <%= link_to "ユーザー", users_path, class:"btn btn-outline-dark btn-xs" %>
            </li>
            <li>
-               <%= link_to "投稿一覧", pubs_path, :class => "btn btn-outline-dark btn-xs" %>
+               <%= link_to "投稿一覧", pubs_path, class:"btn btn-outline-dark btn-xs" %>
            </li>
            <li>
-               <%= link_to "マイページ", user_path, :class => "btn btn-outline-dark btn-xs" %>
+               <%= link_to "マイページ", user_path(id:current_user.id), class:"btn btn-outline-dark btn-xs" %>
            </li>
            <li>
-               <%= link_to "ログアウト", destroy_userr_session_path, method: :delete, :class => "btn btn-outline-dark btn-xs" %>
+               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn btn-outline-dark btn-xs" %>
            </li></br>
            <% else %>
            <li>
-               <%= link_to "ホーム", root_path, :class => "btn btn-outline-dark btn-xs" %>
+               <%= link_to "ホーム", root_path, class:"btn btn-outline-dark btn-xs" %>
            </li>
            <li>
-             <%= link_to "投稿一覧", pubs_path, :class => "btn btn-outline-dark btn-xs" %>
+             <%= link_to "投稿一覧", pubs_path, class:"btn btn-outline-dark btn-xs" %>
            </li>
            <li>
-             <%= link_to "新規登録", new_user_registration_path, :class => "btn btn-outline-dark btn-xs" %>
+             <%= link_to "新規登録", new_user_registration_path, class:"btn btn-outline-dark btn-xs" %>
            </li>
            <li>
-             <%= link_to "ログイン", new_user_session_path, :class => "btn btn-outline-dark btn-xs" %>
+             <%= link_to "ログイン", new_user_session_path, class:"btn btn-outline-dark btn-xs" %>
            </li></br>
            <% end %>
        </ul>

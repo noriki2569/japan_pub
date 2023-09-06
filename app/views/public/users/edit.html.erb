@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row justify-content-left">
+    <h2>アカウント編集</h2>
+  </div>
+
+  <div class="row">
+    <%= form_with model: @user, url: user_path(id:current_user.id), method: :patch do |f| %>
+    <div class="col-md-6">
+    <div class="field">
+      <p>ニックネーム</p>
+      <%= f.text_field :nickname %>
+    </div>
+    <div class="field">
+      <p>メールアドレス</p>
+      <%= f.text_field :email %>
+    </div></br>
+    <div class="field">
+      <p>パスワード</p>
+      <%#= f.text_field :passwords %>
+    </div></br>
+    <div class="field">
+      <p>自己紹介文</p>
+      <%= f.text_area :self_introduction %>
+    </div></br>
+    <div class="field">
+      <%= f.submit "内容を保存" %>
+    </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="field">
+        <p>ユーザー写真</p>
+        <%= f.file_field :image, accept: "image/*" %></br>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
