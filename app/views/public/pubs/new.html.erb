@@ -47,7 +47,7 @@
         <font size="5">投稿写真</font>
       </div>
       <div class="field">
-        <%= f.file_field :image, accept: "image/*" %></br>
+        <%= f.file_field :images, multiple: true, accept: "image/*" %></br>
       </div>
     </div>
     <% end %>

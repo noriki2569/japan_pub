@@ -16,7 +16,7 @@ class Public::PubsController < ApplicationController
   end
 
   def show
-    @pub = Pub.find(prams[:id])
+    @pub = Pub.find(params[:id])
     @user = @pub.user
   end
 
@@ -40,6 +40,6 @@ class Public::PubsController < ApplicationController
 
   private
   def pub_params
-    params.require(:pub).permit(:name, :introduction, :average_budget, :images)
+    params.require(:pub).permit(:name, :introduction, :average_budget, images: [])
   end
 end
