@@ -33,7 +33,6 @@ class Public::PubsController < ApplicationController
     if @pub.update(pub_params)
        redirect_to pub_path(@pub.id)
     else
-       @pubs = Pub.all
        render :edit
     end
   end

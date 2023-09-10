@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 2023_09_06_103713) do
     t.integer "user_id", null: false
     t.string "name", null: false
     t.text "introduction"
-    t.integer "average_budget", null: false
+    t.string "average_budget", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,1 +1,39 @@
-<div class=""
+<div class="container">
+    <div class="row justify-content-left">
+        <h1>居酒屋詳細</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <% @pub.images.each do |image| %>
+            <%= image_tag image, size: "200x200" %>
+            <% end %>
+        </div>
+
+        <div class="col-6">
+            <table colass="table">
+                <tbody>
+                    <tr>
+                        <th>居酒屋名</th>
+                        <td><%= @pub.name %></td>
+                    </tr>
+                    <tr>
+                        <th>ユーザー名</th>
+                        <td><%= @user.nickname %></td>
+                    </tr>
+                    <tr>
+                        <th>居酒屋紹介文</th>
+                        <td><%= @pub.introduction %></td>
+                    </tr>
+                    <tr>
+                        <th>目安予算</th>
+                        <td><%= @pub.average_budget %>円</td>
+                    </tr>
+                </tbody>
+            </table>
+            <% if @user == current_user %>
+            <%= link_to "投稿編集", edit_pub_path, class:"btn btn-success" %></br>
+            <% end %>
+        </div>
+    </div>
+</div>

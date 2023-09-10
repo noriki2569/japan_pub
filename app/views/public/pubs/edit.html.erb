@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row justify-content-left">
+    <h1>居酒屋詳細編集</h1>
+  </div>
+
+  <%= form_with model: @pub, url: pub_path(@pub.id), method: :patch do |f| %>
+  <div class="row">
+    <div class="col-6">
+      <font size="5">投稿写真</font></br>
+      <%= f.file_field :images, accept: "image/*" %></br>
+      <% @pub.images.each do |image| %>
+      <%= image_tag image, size: "200x200" %>
+      <% end %>
+    </div>
+
+    <div class="col-6">
+      <table colass="table">
+        <tbody>
+          <tr>
+            <th>居酒屋名</th>
+            <td><%= f.text_field :name %></td>
+          </tr>
+          <tr>
+            <th>居酒屋紹介文</th>
+            <td><%= f.text_area :introduction %></td>
+          </tr>
+          <tr>
+            <th>目安予算</th>
+            <td><%= f.text_field :average_budget %>円</td>
+          </tr>
+        </tbody>
+      </table>
+      <%= f.submit "変更を保存", class:"btn btn-success" %>
+    </div>
+    <% end %>
+  </div>
+</div>
