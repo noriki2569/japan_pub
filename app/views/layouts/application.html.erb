@@ -16,6 +16,7 @@
      <nav class="navbar navbar-expand-lg navbar-light">
       <div class ="container">
         <h1><%= link_to "Territory", root_path, class:"btn btn-outline-dark btn-lg" %></h1>
+        <div>
         <ul class="navbar-nav bd-navbar-nav flex-row-left">
            <% if admin_signed_in? %>
            <li>
@@ -29,7 +30,7 @@
            </li>
            <% elsif user_signed_in? %>
            <li>
-               <%= link_to "ホーム", root_path, class:"btn btn-outline-dark btn-xs" %>
+               <%= link_to "新規投稿", new_pub_path, class:"btn btn-outline-dark btn-xs" %>
            </li>
            <li>
                <%= link_to "ユーザー", users_path, class:"btn btn-outline-dark btn-xs" %>
@@ -42,11 +43,7 @@
            </li>
            <li>
                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn btn-outline-dark btn-xs" %>
-           </li></br>
-           <!--<div class="input-group">-->
-           <!--    <input type="text" class="form-control" placeholder="キーワードを入力">-->
-           <!--    <button class="btn btn-outline-success" type="button" id="button-addon2"><i class="fas fa-search"></i> 検索</button>-->
-           <!--</div></br>-->
+           </li>
            <% else %>
            <li>
                <%= link_to "ホーム", root_path, class:"btn btn-outline-dark btn-xs" %>
@@ -62,6 +59,15 @@
            </li></br>
            <% end %>
        </ul>
+       <div class="wrap">
+               <%= form_with url: search_path do |f| %>
+                   <%= f.text_field :keyword %>
+                   <%= button_tag type: "submit", class: "btn btn-default" do %>
+                       <i class="fa fa-search"></i>
+                   <% end %>
+               <% end %>
+       </div>
+       </div>
       </div>
      </nav>
     </header>
