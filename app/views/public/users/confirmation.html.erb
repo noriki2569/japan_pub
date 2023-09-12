@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h2>退会画面</h2>
+  </div>
+  <div class="row justify-content-center">
+    <div>
+      <h3>「退会する」のボタンを押してしまうと</h3></br>
+      <h3>本当に退会してしまいますがよろしいですか</h3></br>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div>
+      <%= link_to "退会しない", user_path(id:current_user.id), :class => "btn btn-primary" %>
+      <%= link_to "退会する", users_withdrawal_path, method: :patch, :class => "btn btn-danger", data: { confirm: "本当に退会しますか？" } %>
+    </div>
+  </div>
+</div>

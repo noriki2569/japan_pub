@@ -5,7 +5,7 @@
 
   <div class="row">
     <%= form_with model: @user, url: user_path(id:current_user.id), method: :patch do |f| %>
-    <div class="col-md-6">
+    <div class="col-6">
     <div class="field">
       <p>ニックネーム</p>
       <%= f.text_field :nickname %>
@@ -14,24 +14,32 @@
       <p>メールアドレス</p>
       <%= f.text_field :email %>
     </div></br>
-    <div class="field">
-      <p>パスワード</p>
+    <!--<div class="field">-->
+    <!--  <p>パスワード</p>-->
       <%#= f.text_field :passwords %>
-    </div></br>
+    <!--</div></br>-->
     <div class="field">
       <p>自己紹介文</p>
       <%= f.text_area :self_introduction %>
     </div></br>
-    <div class="field">
-      <%= f.submit "内容を保存" %>
+    <div class="row">
+      <div class="col">
+         <div class="field">
+           <%= f.submit "内容を保存" %>
+         </div>
+      </div>
+      <div class="col">
+         <div class="field">
+           <%= link_to "退会", users_confirmation_path, class:"btn btn-danger" %>
+         </div>
+      </div>
     </div>
     </div>
 
-    <div class="col-md-6">
-      <div class="field">
-        <p>ユーザー写真</p>
-        <%= f.file_field :image, accept: "image/*" %></br>
-      </div>
+    <div class="col-6">
+      <font size="5">ユーザー写真</font>
+      <%= f.file_field :profile_image, accept: "image/*" %></br>
+      <%= image_tag @user.profile_image, size: "250x250" %>
     </div>
     <% end %>
   </div>

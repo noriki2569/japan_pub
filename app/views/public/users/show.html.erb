@@ -1,13 +1,23 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      <%= image_tag @user.get_profile_image(100,100) %>
+      <%= image_tag @user.get_profile_image(150,150) %></br>
       <%= @user.nickname %></br>
       <%= @user.self_introduction %></br>
       <%= link_to "編集", edit_user_path, class:"btn btn-success" %></br>
     </div>
 
     <div clas="col-md-8">
+      <div class="row">
+        <div class="col-4">
+          <% @pubs.each do |pub| %>
+          <% if pub.images.attached? %>
+          <%= image_tag pub.images[0].variant(gravity: :center, resize:"200x200^") %></br>
+          <% end %>
+          <%= link_to pub.name, pub_path(pub.id) %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

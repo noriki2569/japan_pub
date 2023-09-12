@@ -4,13 +4,13 @@
   </div>
 
   <div class="row">
-    <%= form_with @user, url: admin_user_path(@user.id), method: :patch do |user| %>
+    <%= form_with model: @user, url: admin_user_path, method: :patch do |user| %>
     <div>
       <table class="table table-borderless">
         <tbody>
           <tr>
             <th>会員ID</th>
-            <td><%= user.id %></td>
+            <td><%= @user.id %></td>
           </tr>
           <tr>
             <th>ユーザー名</th>

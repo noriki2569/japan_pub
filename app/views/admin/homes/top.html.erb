@@ -3,15 +3,11 @@
     <div class="col-4">
       <% @pubs.each do |pub| %>
       <div class="field">
-        <%= link_to user_path(@user.id) do %>
-        <%= pub.user.nickname %>
-        <% end %>
+        <%= pub.user.nickname %></br>
         <% if pub.images.attached? %>
         <%= image_tag pub.images[0].variant(gravity: :center, resize:"200x200^") %></br>
         <% end %>
-        <%= link_to pub_path(pub.id) do %>
         <%= pub.name %></br>
-        <% end %>
       </div>
       <% end %>
     </div>
