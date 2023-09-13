@@ -19,4 +19,10 @@ class Admin::UsersController < ApplicationController
       render :edit
     end
   end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:nickname, :email, :self_introduction, :profile_image)
+  end
 end
