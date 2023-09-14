@@ -1,42 +1,47 @@
-<div class="container">
-  <div class="row justify-content-left">
+<div class="container vh-100">
+  <div class="row justify-content-left m-3">
     <h2>アカウント作成</h2>
   </div>
   <div class="row justify-content-left">
     <%= form_with model: @user, url: user_registration_path do |f| %>
     <%= render "public/shared/error_messages", resource: resource %>
-
-    <div class="field">
+    <div class="col-7 offset-1">
+    <div class="field mb-3">
       <%= f.label :nickname, "ニックネーム" %>
       <%= f.text_field :nickname %>
     </div>
 
-    <div class="field">
+    <div class="field mb-3">
       <%= f.label :email, "メールアドレス" %>
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
 
-    <div class="field">
-       <%= f.label :password, "パスワード" %></br>
+    <div class="field mb-1">
+       <%= f.label :password, "パスワード" %>
        <% if @minimum_password_length %>
        (<%= @minimum_password_length %> 文字以上)
        <% end %>
        <%= f.password_field :password, autocomplete: "new-password" %>
     </div>
 
-　　<div class="field">
+　　<div class="field mb-3">
       <%= f.label :password_confirmation, "パスワード(確認用)" %>
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 
-    <div class="field">
+    <div class="field mb-3">
       <%= f.label :self_introduction, "自己紹介文" %>
-      <%= f.text_field :self_introduction %>
+      <%= f.text_area :self_introduction %>
     </div>
 
     <div class="actions">
       <%= f.submit "登録", :class => "btn btn-success" %>
     </div>
+    </div>
     <% end %>
+
+    <div class="col-4">
+
+    </div>
   </div>
 </div>

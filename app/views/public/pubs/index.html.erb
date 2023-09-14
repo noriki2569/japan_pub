@@ -1,13 +1,13 @@
-<div class="container">
-  <div class="row">
+<div class="container vh100">
+  <div class="row vh100 align-items-center ">
     <div class="col-4">
       <% @pubs.each do |pub| %>
-      <div class="field">
+      <div class="field rounded border border-dark">
         <%= link_to user_path(@user.id) do %>
-        <%= pub.user.nickname %>
+        <%= pub.user.nickname %><br>
         <% end %>
         <% if pub.images.attached? %>
-        <%= image_tag pub.images[0].variant(gravity: :center, resize:"200x200^") %></br>
+        <%= image_tag pub.images[0].variant(gravity: :center, resize:"200x200^") %><br>
         <% end %>
         <%= link_to pub_path(pub.id) do %>
         <%= pub.name %></br>
