@@ -15,12 +15,18 @@
     <header>
      <nav class="navbar navbar-expand-lg navbar-light">
       <div class ="container">
-        <h1><%= link_to "Territory", root_path, class:"btn btn-outline-dark btn-lg" %></h1>
+        <div>
+          <font size="7">
+            <%= link_to "Territory", root_path, class:"navbar-brand title-size" %></br>
+          </font>
+            <font size="5">〜オススメ居酒屋〜</font>
+        </div>
+
         <div>
         <ul class="navbar-nav bd-navbar-nav flex-row-left">
            <% if admin_signed_in? %>
            <li>
-               <%= link_to "ホーム", admin_root_path, class:"btn btn-outline-dark btn-xs" %>
+               <%= link_to "ホーム", admin_root_path, class:"btn btn-outline-dark btn-xs mr-2" %>
            </li>
            <li>
                <%= link_to "会員一覧", admin_users_path, class:"btn btn-outline-dark btn-xs" %>
@@ -42,20 +48,20 @@
                <%= link_to "マイページ", user_path(id:current_user.id), class:"btn btn-outline-dark btn-xs" %>
            </li>
            <li>
-               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn btn-outline-dark btn-xs" %>
+               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn btn-outline-dark btn-xs text-dark" %>
            </li>
            <% else %>
-           <li>
-               <%= link_to "ホーム", root_path, class:"btn btn-outline-dark btn-xs" %>
+           <li class="nav-item">
+               <%= link_to "ホーム", root_path, class:"nav-link border border-dark rounded mr-3 text-dark" %>
            </li>
-           <li>
-             <%= link_to "投稿一覧", pubs_path, class:"btn btn-outline-dark btn-xs" %>
+           <li class="nav-item">
+             <%= link_to "投稿一覧", pubs_path, class:"nav-link border border-dark rounded mr-3 text-dark" %>
            </li>
-           <li>
-             <%= link_to "新規登録", new_user_registration_path, class:"btn btn-outline-dark btn-xs" %>
+           <li class="nav-item">
+             <%= link_to "新規登録", new_user_registration_path, class:"nav-link border border-dark rounded mr-3 text-dark" %>
            </li>
-           <li>
-             <%= link_to "ログイン", new_user_session_path, class:"btn btn-outline-dark btn-xs" %>
+           <li class="nav-item">
+             <%= link_to "ログイン", new_user_session_path, class:"nav-link border border-dark rounded mr-3 text-dark" %>
            </li></br>
            <% end %>
        </ul>
@@ -63,7 +69,7 @@
                <%= form_with url: search_path do |f| %>
                    <%= f.text_field :keyword %>
                    <%= button_tag type: "submit", class: "btn btn-default" do %>
-                       <i class="fa fa-search"></i>
+                   <i class="fa fa-search"></i>
                    <% end %>
                <% end %>
        </div>

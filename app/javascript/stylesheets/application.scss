@@ -1,1 +1,16 @@
 @use '~bootstrap/scss/bootstrap';
+.navbar-nav > li > a:hover {
+  color: white;
+}
+.title-size{
+  font-size: 60px;
+}
+// body{
+//   height: 100vh;
+// }
+.vh100{
+  height: 60vh;
+}
+.f40{
+  font-size: 40px;
+}
