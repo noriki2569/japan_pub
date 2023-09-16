@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row justify-content-left">
-    <h1>居酒屋詳細編集</h1>
+    <h1 class="mt-4">居酒屋詳細編集</h1>
   </div>
 
   <%= form_with model: @pub, url: pub_path(@pub.id), method: :patch do |f| %>
   <div class="row">
-    <div class="col-6">
+    <div class="col-8">
       <font size="5">投稿写真</font></br>
       <%= f.file_field :images, accept: "image/*" %></br>
       <% @pub.images.each do |image| %>
@@ -13,7 +13,7 @@
       <% end %>
     </div>
 
-    <div class="col-6">
+    <div class="col-4">
       <table colass="table">
         <tbody>
           <tr>

@@ -1,31 +1,31 @@
 <div class="container">
     <div class="row justify-content-left">
-        <h1>居酒屋詳細</h1>
+        <h1 class="mt-4 mb-4">居酒屋詳細</h1>
     </div>
 
     <div class="row">
-        <div class="col-6">
+        <div class="col-8">
             <% @pub.images.each do |image| %>
-            <%= image_tag image, size: "200x200" %>
+            <%= image_tag image, size: "200x200", class:"mb-5" %>
             <% end %>
         </div>
 
-        <div class="col-6">
+        <div class="col-4">
             <table colass="table">
                 <tbody>
-                    <tr>
+                    <tr class="mb-4">
                         <th>居酒屋名</th>
                         <td><%= @pub.name %></td>
                     </tr>
-                    <tr>
+                    <tr class="mt-3 mb-4">
                         <th>ユーザー名</th>
                         <td><%= @user.nickname %></td>
                     </tr>
-                    <tr>
+                    <tr class="mt-3 mb-4">
                         <th>居酒屋紹介文</th>
                         <td><%= @pub.introduction %></td>
                     </tr>
-                    <tr>
+                    <tr class="mt-3 mb-4">
                         <th>目安予算</th>
                         <td><%= @pub.average_budget %>円</td>
                     </tr>

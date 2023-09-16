@@ -2,16 +2,12 @@
   <div class="row vh100 align-items-center ">
     <div class="col-4">
       <% @pubs.each do |pub| %>
-      <div class="field rounded border border-dark">
-        <%= link_to user_path(@user.id) do %>
-        <%= pub.user.nickname %><br>
-        <% end %>
+      <div class="field rounded ">
+        <%= link_to pub.user.nickname, user_path(@user.id), class:"link" %><br>
         <% if pub.images.attached? %>
         <%= image_tag pub.images[0].variant(gravity: :center, resize:"200x200^") %><br>
         <% end %>
-        <%= link_to pub_path(pub.id) do %>
-        <%= pub.name %></br>
-        <% end %>
+        <%= link_to pub.name, pub_path(pub.id), class:"link" %>
       </div>
       <% end %>
     </div>
