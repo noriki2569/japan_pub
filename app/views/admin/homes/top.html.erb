@@ -1,15 +1,18 @@
-<div class="container">
-  <div class="row">
+<div class="container vh">
+  <div class="row justify-content-center">
+    <h2 class="mt-4 mb-4">居酒屋一覧</h2>
+  </div>
+  <div class="row vh100 align-items-center ">
+    <% @pubs.each do |pub| %>
     <div class="col-4">
-      <% @pubs.each do |pub| %>
-      <div class="field">
-        <%= pub.user.nickname %></br>
+      <div class="field rounded ">
+        <%= pub.user.nickname %><br>
         <% if pub.images.attached? %>
-        <%= image_tag pub.images[0].variant(gravity: :center, resize:"200x200^") %></br>
+        <%= image_tag pub.images[0].variant(gravity: :center, resize:"250x250^") %><br>
         <% end %>
-        <%= pub.name %></br>
+        <%= pub.name %>
       </div>
-      <% end %>
     </div>
+    <% end %>
   </div>
 </div>

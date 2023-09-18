@@ -1,31 +1,36 @@
-<div class="cntainer">
-  <div class="row justify-content-left">
-    <font size="4">
+<div class="container vh">
+  <div class="row justify-content-center">
+    <h2 class="mt-4 mb-4">
       ユーザー　一覧
-    </font>
+    </h2>
   </div>
 
   <div class="row justify-content-center">
-    <table class="table">
-      <thead  class="thead-light">
-        <tr>
-          <th colspan="2"></th>
-          <th>ユーザー名</th>
-        </tr>
-      </thead>
+    <div class="col-9">
+      <table class="table mr-4 ml-4">
+        <thead  class="thead-light">
+          <tr>
+            <th colspan="1"></th>
+            <th>ユーザー名</th>
+          </tr>
+        </thead>
 
-      <tbody>
         <% @user.each do |user| %>
-        <tr>
-          <td>
-            <%= image_tag user.get_profile_image(80,80) %>
-          </td>
-          <td>
-            <%= user.nickname %>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <%= image_tag user.get_profile_image(100,100) %>
+            </td>
+            <td>
+              <%= user.nickname %>
+            </td>
+          </tr>
+        </tbody>
         <% end %>
-      </tbody>
-    </table>
+      </table>
+    </div>
+
+
+
   </div>
 </div>

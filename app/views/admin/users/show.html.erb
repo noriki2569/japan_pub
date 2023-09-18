@@ -1,28 +1,52 @@
 <div class="container">
   <div class="row justify-content-left">
-    <h1><%= @user.nickname %>さんの会員詳細</h1>
+    <h1 class="mt-4 mb-5"><%= @user.nickname %>さんの会員詳細</h1>
   </div>
 
   <div class="row">
-    <div>
+    <div class="col-10">
       <table class="table table-borderless">
         <tbody>
           <tr>
-            <th>会員ID</th>
-            <td><%= @user.id %></td>
+            <th>
+              <h4 class="mb">会員ID</h4>
+            </th>
+            <td>
+              <h4 class="mb"><%= @user.id %></h4>
+            </td>
           </tr>
           <tr>
-            <th>ユーザー名</th>
-            <td><%= @user.nickname %></td>
+            <th>
+              <h4 class="mb">ユーザー名</h4>
+            </th>
+            <td>
+              <h4 class="mb"><%= @user.nickname %></h4>
+            </td>
           </tr>
           <tr>
-            <th>メールアドレス</th>
-            <td><%= @user.email %></td>
+            <th>
+              <h4 class="mb">メールアドレス</h4>
+            </th>
+            <td>
+              <h4 class="mb"><%= @user.email %></h4>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <h4>会員ステータス</h4>
+            </th>
+            <td>
+              <h4>
+                <% if @user.is_deleted == true %>
+                <font size="4" color="secondary">退会</font>
+                <% else %>
+                <font size="4" color="success">有効</font>
+                <% end %>
+              </h4>
+            </td>
           </tr>
         </tbody>
       </table>
-    </div>
-    <div>
       <%= link_to "編集",  edit_admin_user_path, class:"btn btn-success" %>
     </div>
   </div>

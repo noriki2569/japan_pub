@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row justify-content-left">
-    <h1>会員一覧</h1>
+    <h1 class="mt-5 mb-4">会員一覧</h1>
   </div>
 
   <div class="row justify-content-center">
-    <div>
-      <table class="table">
+    <div class="col-10">
+      <table class="table mr-4 ml-4">
         <thead>
           <tr>
             <th>会員ID</th>
@@ -14,17 +14,29 @@
             <th>ステータス</th>
           </tr>
         </thead>
+
+        <% @users.each do |user| %>
         <tbody>
-          <% @users.each do |user| %>
           <tr>
             <td><%= user.id %></td>
             <td>
               <%= link_to user.nickname, admin_user_path(user.id) %>
             </td>
             <td><%= user.email %></td>
+            <td>
+              <% if user.is_deleted == true %>
+              <font color="Secondary">
+                退会
+              </font>
+              <% else %>
+              <font color="success">
+                有効
+              </font>
+              <% end %>
+            </td>
           </tr>
-          <% end %>
         </tbody>
+        <% end %>
       </table>
     </div>
   </div>
