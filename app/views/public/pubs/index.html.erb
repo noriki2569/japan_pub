@@ -1,11 +1,12 @@
+<div class="pub-image vh-100">
 <div class="container vh">
   <div class="row justify-content-center">
-    <h2 class="mt-4 mb-4">居酒屋一覧</h2>
+    <h2 class="mt-4 mb-4 text-color bg-pub">居酒屋一覧</h2>
   </div>
   <div class="row vh100 align-items-center ">
     <% @pubs.each do |pub| %>
-    <div class="col-4">
-      <div class="field rounded ">
+    <div class="col-4 ">
+      <div class="field rounded bg-pub">
         <%= link_to pub.user.nickname, user_path(@user.id), class:"link" %><br>
         <% if pub.images.attached? %>
         <%= image_tag pub.images[0].variant(gravity: :center, resize:"250x250^") %><br>
@@ -15,4 +16,5 @@
     </div>
     <% end %>
   </div>
+</div>
 </div>

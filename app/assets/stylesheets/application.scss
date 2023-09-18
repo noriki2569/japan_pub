@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+.top-image{
+  background-image: image-url('sakaba4.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.lg-image{
+  background-image: image-url('sakaba5.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.pub-image{
+  background-image: image-url('izakaya6.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
