@@ -13,12 +13,14 @@
 
     <div clas="col-md-8">
       <div class="row">
-        <div class="col-4 mt-5">
+        <div class="col-4">
           <% @pubs.each do |pub| %>
           <% if pub.images.attached? %>
           <%= image_tag pub.images[0].variant(gravity: :center, resize:"200x200^") %></br>
           <% end %>
-          <%= link_to pub.name, pub_path(pub.id) %>
+          <h6 class="mt-1 mb-1 mr-1">
+            <%= link_to pub.name, pub_path(pub.id) %>
+          </h6>
           <% end %>
         </div>
       </div>
