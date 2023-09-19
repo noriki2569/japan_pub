@@ -30,7 +30,7 @@ class Public::PubsController < ApplicationController
 
   def update
     @pub = Pub.find(params[:id])
-    if @pub.update(pub_params)
+    if @pub.update!(pub_params)
        redirect_to pub_path(@pub.id)
     else
        render :edit

@@ -8,7 +8,7 @@
     <div class="col-7">
       <h4 class="mt-3 mb-1">投稿写真</h4></br>
       <div class="mb-4">
-        <%= f.file_field :images, accept: "image/*" %></br>
+        <%= f.file_field :images, multiple: true, accept: "image/*" %></br>
       </div>
       <% @pub.images.each do |image| %>
       <%= image_tag image, size: "170x170", class:"mb-1 mr-1" %>
