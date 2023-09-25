@@ -15,18 +15,26 @@
  */
 
 .top-image{
-  background-image: image-url('sakaba4.jpg');
-  background-position: center center;
+  background-image: image-url('top.jpg');
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 973px;
 }
-.lg-image{
-  background-image: image-url('sakaba5.jpg');
-  background-position: center center;
+.nw-bg-image{
+  background-image: image-url('beer2.jpg');
+  background-position: left bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 1100px;
+}
+
+.lg-image{
+  background-image: image-url('session.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 1050px;
 }
 .pub-image{
   background-image: image-url('izakaya6.jpg');

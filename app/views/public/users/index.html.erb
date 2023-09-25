@@ -1,3 +1,4 @@
+<div class="pub-image vh-100">
 <div class="container vh">
   <div class="row justify-content-center">
     <h2 class="mt-4 mb-4">
@@ -22,7 +23,7 @@
               <%= image_tag user.get_profile_image(100,100) %>
             </td>
             <td>
-              <%= user.nickname %>
+              <%= link_to user.nickname, user_path(user.id) %>
             </td>
           </tr>
         </tbody>
@@ -33,4 +34,5 @@
 
 
   </div>
+</div>
 </div>

@@ -11,7 +11,7 @@ class Public::PubsController < ApplicationController
   end
 
   def index
-    @pubs = Pub.all
+    @pubs = Pub.all.order(created_at: :desc)
     @user = current_user
   end
 
