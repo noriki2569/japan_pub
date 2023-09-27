@@ -17,10 +17,10 @@
         </thead>
 
         <% @user.each do |user| %>
-        <tbody>
+        <tbody class="bg-cl-tb">
           <tr>
             <td>
-              <%= image_tag user.get_profile_image(100,100) %>
+              <%= image_tag user.get_profile_image(100,100).processed %>
             </td>
             <td>
               <%= link_to user.nickname, user_path(user.id) %>
