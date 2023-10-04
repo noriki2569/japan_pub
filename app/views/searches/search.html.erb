@@ -1,19 +1,29 @@
+<div class="pub-image">
 <div class="container">
   <div class="row justify-content-left">
     <h2 class="mt-5 mt-4">検索結果</h2>
   </div>
 
-  <div class="row vh100 align-items-center ">
+  <div class="row">
     <% @pubs.each do |pub| %>
-    <div class="col-4">
-      <div class="field rounded ">
-        <%= link_to pub.user.nickname, user_path(@user.id), class:"link" %><br>
-        <% if pub.images.attached? %>
-        <%= image_tag pub.images[0].variant(gravity: :center, resize:"250x250^") %><br>
-        <% end %>
-        <%= link_to pub.name, pub_path(pub.id), class:"link" %>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-header">
+            <%= link_to pub.user.nickname, user_path(@user.id), class: "link" %>
+          </div>
+          <% if pub.images.attached? %>
+            <%= image_tag pub.images.first.variant(resize_to_limit: [300, 300]).processed, class: "pub-card-image" %><br>
+          <% else %>
+            <%= image_tag "no-image.jpg".processed, class: "pub-card-image" %>
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= link_to pub.name, pub_path(pub.id), class: "link" %>
+            </h5>
+          </div>
+        </div>
       </div>
-    </div>
     <% end %>
   </div>
+</div>
 </div>
