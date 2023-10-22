@@ -17,6 +17,7 @@ class Public::PubsController < ApplicationController
 
   def show
     @pub = Pub.find(params[:id])
+    @comment = Comment.new
     @user = @pub.user
   end
 

@@ -12,6 +12,7 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
 scope module: :public do
     root to: 'homes#top'
     resources :pubs, only: [:new, :index, :show, :update, :create, :edit, :destroy] do
+      resources :comments, only: [:create]
       resource :favorites, only: [:create, :destroy]
     end
     get "users/confirmation" => 'users#confirmation'

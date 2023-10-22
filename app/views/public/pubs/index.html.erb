@@ -19,6 +19,19 @@
           <div class="card-body">
             <h5 class="card-title">
               <%= link_to pub.name, pub_path(pub.id), class: "link" %>
+              <% if pub.favorited_by?(current_user) %>
+              <p>
+                <%= link_to pub_favorites_path(pub), method: :delete do %>
+                  ♥<%= pub.favorites.count %>
+                <% end %>
+              </p>
+              <% else %>
+              <p>
+                <%= link_to pub_favorites_path(pub), method: :post do %>
+                  ♡<%= pub.favorites.count %>
+                <% end %>
+              </p>
+              <% end %>
             </h5>
           </div>
         </div>
