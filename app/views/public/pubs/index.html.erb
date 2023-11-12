@@ -24,12 +24,14 @@
                 <%= link_to pub_favorites_path(pub), method: :delete do %>
                   ♥<%= pub.favorites.count %>
                 <% end %>
+                <i class="fa-regular fa-message"></i><%= pub.comments.count %>
               </p>
               <% else %>
               <p>
                 <%= link_to pub_favorites_path(pub), method: :post do %>
                   ♡<%= pub.favorites.count %>
                 <% end %>
+                <i class="fa-regular fa-message"></i><%= pub.comments.count %>
               </p>
               <% end %>
             </h5>
