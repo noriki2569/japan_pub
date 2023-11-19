@@ -42,10 +42,17 @@
 }
 
 .pub-card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.user-card-image {
   width: 250px;
   height: 250px;
   object-fit: scale-down;
 }
+
 .bg-cl-tb{
   background-color: #f8f9fa;
 }
