@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  
 devise_for :users, skip: [:passwords], controllers: {
   registrations: "public/registrations",
   sessions: 'public/sessions'
@@ -19,6 +19,10 @@ scope module: :public do
     patch "users/withdrawal" => 'userrs#withdrawal'
     resources :users, only: [:index, :show, :edit, :update]
 end
+
+# devise_scope :user do
+#     post 'users/guest_sign_in', to: 'users/sessions#guest_sign_in'
+# end
 
 namespace :admin do
    root to: 'homes#top'
